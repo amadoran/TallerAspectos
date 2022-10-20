@@ -1,2 +1,4 @@
 Tipo de transacción: transacción - Hora: Thu Oct 20 16:18:46 COT 2022
 Tipo de transacción: retiro - Hora: Thu Oct 20 16:18:46 COT 2022
+Tipo de transacción: transacción - Hora: Thu Oct 20 17:31:47 COT 2022
+Tipo de transacción: retiro - Hora: Thu Oct 20 17:31:47 COT 2022
