@@ -1,1 +1,4 @@
-Tipo de transaccion:  retiro Dinero  Fecha:  2022-10-20T12:29:35.029155
+Tipo de transaccion:  transaccion de dinero  Fecha:  2022-10-20
+Tipo de transaccion:  transaccion de dinero  Fecha:  2022-10-20
+Tipo de transaccion:  transaccion de dinero  Fecha:  2022-10-20
+Tipo de transaccion:  transaccion de dinero  Fecha:  2022-10-20

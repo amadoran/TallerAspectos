@@ -17,5 +17,9 @@ public aspect Logger {
     	System.out.println("**** Retiro excitoso ****");
     }
     
+    pointcut transaccion(): call (* moneyMakeTransaction*(..) );
+    after (): transaccion() {
+    	System.out.println("**** Transacción exitosa ****");
+    }
     
 }

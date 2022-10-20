@@ -3,6 +3,7 @@ package com.bank;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -46,13 +47,14 @@ public class Bank {
         case 2:
             System.out.println("Realizar transaccion");
             System.out.println("------------------------------------");
-             moneyMakeTransaction(); 
+             moneyMakeTransaction();
+             writeText("transaccion de dinero");
         break;
         case 3:
             System.out.println("Retirar dinero");
             System.out.println("------------------------------------");
              moneyWithdrawal();
-             writeText("retiro Dinero");
+             writeText("retiro de dinero");
              
         break;
         case 4:
@@ -100,8 +102,9 @@ public class Bank {
         System.out.println("------------------------------------");
     }
     public  static void writeText(String tipo) {
-    	try(BufferedWriter bw = new BufferedWriter(new FileWriter("Log.txt"))){		
-    		bw.write("Tipo de transaccion:  "+tipo+"  Fecha:  "+ LocalDateTime.now());
+    	try(BufferedWriter bw = new BufferedWriter(new FileWriter("Log.txt", true))){		
+    		bw.write("Tipo de transaccion:  "+tipo+"  Fecha:  "+ LocalDate.now()+"\n");
+    		
     	}catch(IOException e) {
     		e.getCause();
     	}
