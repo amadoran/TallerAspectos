@@ -1,1 +1,2 @@
-Tipo de transaccion:  retiro de dinero  Hora:  14:07:44.862724100
+Tipo de transacción: transacción - Hora: Thu Oct 20 16:18:46 COT 2022
+Tipo de transacción: retiro - Hora: Thu Oct 20 16:18:46 COT 2022
