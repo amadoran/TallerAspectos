@@ -1,5 +1,9 @@
 package com.bank;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -48,6 +52,8 @@ public class Bank {
             System.out.println("Retirar dinero");
             System.out.println("------------------------------------");
              moneyWithdrawal();
+             writeText("retiro Dinero");
+             
         break;
         case 4:
             System.out.println("Ver Usuarios");
@@ -84,7 +90,7 @@ public class Bank {
     public static void moneyWithdrawal(){
         int id = Integer.valueOf(readConsole("Key: "));
         double money = Double.valueOf(readConsole("Dinero a retirar: "));
-        users.get(id-1).setMoney(users.get(id-1).getMoney() - money);
+        users.get(id-1).setMoney(users.get(id-1).getMoney() - money); 
     }
     public static void viewUsers(){
         System.out.println("------------------------------------");
@@ -92,6 +98,13 @@ public class Bank {
             System.out.println(u);
         }
         System.out.println("------------------------------------");
+    }
+    public  static void writeText(String tipo) {
+    	try(BufferedWriter bw = new BufferedWriter(new FileWriter("Log.txt"))){		
+    		bw.write("Tipo de transaccion:  "+tipo+"  Fecha:  "+ LocalDateTime.now());
+    	}catch(IOException e) {
+    		e.getCause();
+    	}
     }
     
 }

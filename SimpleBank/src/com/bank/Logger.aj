@@ -11,4 +11,11 @@ public aspect Logger {
     after() : success() {
     	System.out.println("**** User created ****");
     }
+    
+    pointcut retiro() : call(* moneyWithdrawal*(..) );
+    after(): retiro(){
+    	System.out.println("**** Retiro excitoso ****");
+    }
+    
+    
 }
