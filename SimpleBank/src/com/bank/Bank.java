@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -103,7 +104,7 @@ public class Bank {
     }
     public  static void writeText(String tipo) {
     	try(BufferedWriter bw = new BufferedWriter(new FileWriter("Log.txt", true))){		
-    		bw.write("Tipo de transaccion:  "+tipo+"  Fecha:  "+ LocalDate.now()+"\n");
+    		bw.write("Tipo de transaccion:  "+tipo+"  Hora:  "+ LocalTime.now()+"\n");
     		
     	}catch(IOException e) {
     		e.getCause();
